@@ -19,3 +19,12 @@ function openmenu(){
 function closemenu(){
     sidemenu.style.right = "-200px";
 }
+
+function sendMail(){
+    let parms = {
+         name : document.getElementById("name").value,
+         email : document.getElementById("email").value,
+         message : document.getElementById("message").value,
+    }
+    emailjs.send("service_uwgu4as","template_be83ss9",parms).then(alert("email sent!!!"))
+}
