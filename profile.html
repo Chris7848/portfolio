@@ -5,16 +5,6 @@
     <title>my portfolio</title>
     <link rel="stylesheet" href="profile.css">
     <script src="https://kit.fontawesome.com/ded4f78075.js" crossorigin="anonymous"></script>
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "jkYeWU6LnOuY9stPj",
-      });
-   })();
-</script>
 </head>
 
 <body>
@@ -159,11 +149,11 @@
                 <a href="images/my-cv.pdf" download class="btn2">Dowload CV</a> 
             </div>
             <div class="contact-right">
-                <form onsubmit="sendMail(event)" >
-                    <input type="text" name="name" placeholder="Your Name" id="name" required>
-                    <input type="email" name="email" placeholder="Your Email" id="email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message" id="message"></textarea>
-                    <button type="submit" class="btn3"  >Submit</button>
+                <form>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn3">Submit</button>
                 </form>
             </div>
         </div>
