@@ -44,3 +44,30 @@ function sendMail(event) {
             console.log("FAILED", error);
         });
 }
+
+const logos = [
+  "images/html-svg.png",
+  "images/css.svg",
+  "images/react.svg",
+  "images/vite.svg",
+];
+
+let index = 0;
+const logoElement = document.querySelector(".logo");
+
+function updateLogo() {
+  logoElement.classList.remove("fade-in");
+
+  // Wait for fade-out to finish before changing
+  setTimeout(() => {
+    index = (index + 1) % logos.length;
+    logoElement.src = logos[index];
+    logoElement.classList.add("fade-in");
+  }, 200); // brief delay to allow fade-out
+}
+
+// Initial fade-in
+logoElement.classList.add("fade-in");
+
+// Change logo every 2 seconds
+setInterval(updateLogo, 3000);
